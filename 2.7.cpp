@@ -9,4 +9,10 @@ int main()
 	double x = 1.2;
 	string s1 = "Hello, World!";
       	string s2 = "1.2";
+
+	cout << a;
+	cout << b;
+	cout << c;
+	cout << x;
+	
 }
