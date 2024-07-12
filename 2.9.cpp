@@ -3,7 +3,7 @@ using namespace std;
 
 char c = 'x';
 int i1 = c;
-int i2 = c + 1000;
+int i2 = c + 1000;	
 double d = i2 + 7.3;
 
 double x = 2.7;
