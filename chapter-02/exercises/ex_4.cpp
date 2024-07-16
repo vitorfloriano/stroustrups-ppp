@@ -23,7 +23,11 @@ int main()
 		largest = val2;
 
 	cout << "The smallest of the two integers is " << smallest << "." << endl;
-	cout << "The largest of the two intergers is " << largest << "." << endl;
-		
+	cout << "The largest of the two integers is " << largest << "." << endl;
+	cout << "The sum of the two integers is " << val1 + val2 << "." << endl;
+	cout << "The difference of the two integers is " << largest - smallest << "." << endl;
+	cout << "The product of the two integers is " << val1 * val2 << "." << endl;
+	cout << "The ratio of the two integers is " << largest * 1.0 / smallest << "." << endl;
+	
 	return 0;
 }
