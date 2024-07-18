@@ -17,5 +17,14 @@ int main()
 	if (currency == 'y')
 		cout << amount << " yen equals to " << amount * y2dol << " dollars." << endl;
 
+	else if (currency == 'k')
+		cout << amount << " kron equals to " << amount * k2dol << " dollars." << endl;
+
+	else if (currency == 'p')
+		cout << amount << " pound equals to " << amount * p2dol << " dollars." << endl;	
+
+	else 
+		cout << "Sorry, but I don't know this currency." << endl;
+	
 	return 0;
 }
