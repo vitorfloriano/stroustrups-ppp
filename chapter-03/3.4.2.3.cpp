@@ -4,10 +4,9 @@ using namespace std;
 
 int main()
 {	
-	int b=1;
-	for (char i='a';i<='z'; ++i)
+	for (int i=48;i<=122; ++i)
 	{
-		cout << i << "\t" << b << endl;
-		++b;
+		char b=i;
+		cout << b << "\t" << i << endl;
 	}
 }
