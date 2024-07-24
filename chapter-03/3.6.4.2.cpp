@@ -5,7 +5,7 @@
 
 int main()
 {
-	std::string dislikes = "bolsonaro";
+	std::vector<std::string> dislikes = {"bolsonaro","michele","queiroz"};
 	std::vector<std::string> words;
 
 	for (std::string temp; std::cin >> temp;)
@@ -15,13 +15,13 @@ int main()
 
 	for (int i = 0; i < words.size(); ++i)
 	{
-		if (words[i] != dislikes)
+		if (std::find(dislikes.begin(),dislikes.end(),words[i])!=dislikes.end())
 		{
-			std::cout << words[i] << std::endl;
+			std::cout << "BLEEP" << std::endl;
 		}
 		else
 		{
-			std::cout << "BLEEP" << std::endl;
+			std::cout << words[i] << std::endl;
 		}
 	}
 
