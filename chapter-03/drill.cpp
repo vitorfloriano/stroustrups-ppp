@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 int main()
 {
@@ -7,6 +8,7 @@ int main()
 	int b = 0;
 
 	while (std::cin >> a >> b){
+
 		std::cout << a << b << std::endl;
 	}
 
