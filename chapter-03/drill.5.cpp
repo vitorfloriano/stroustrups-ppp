@@ -22,10 +22,14 @@ int main()
 				std::cout << "The larger value is: " << a << std::endl;
 			}
 
-			double c = a - b;
-			double d = b - a;
-
-			if (c || d < diff) {
+			double abs_diff;
+			if (a < b) {
+				abs_diff = b - a;
+			} else {
+				abs_diff = a - b;
+			}
+			
+			if (abs_diff < diff) {
 				std::cout << "The numbers are almost equal" << std::endl;
 			}
 
