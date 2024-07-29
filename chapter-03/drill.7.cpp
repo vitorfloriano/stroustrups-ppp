@@ -5,28 +5,24 @@
 int main()
 {
 	double a;
-	std::string currency;
+	std::string unit;
 	double smallest, largest;
 	bool firstInput = true;
 	constexpr double cmToMeters = 0.01;
 	constexpr double mToMeters = 1.00;
 	constexpr double inToMeters = 0.0254;
 
-	while (std::cin >> a >> currency) {
+	while (std::cin >> a >> unit) {
 		
-		switch (currency) {
-			case "cm": {
-			a *= cmToMeters;
-			} break;
-			case "m": {
-			a *= mToMeters;
-			} break;
-			case "in": {
-			a *= inToMeters;
-			} break;
-		}
-
-		std::cout << "You typed " << a << " " << currency << " meters." << std::endl;
+		if (unit == "cm") {
+			std::cout << "You typed " << a << unit << " " << "which equals to " << a * cmToMeters << " meters." << std::endl;
+		} else if (unit == "m") {
+			std::cout << "You typed " << a << unit << " " << "which equals to " << a * mToMeters << " meters." << std::endl;
+		} else if (unit == "in") {
+			std::cout << "You typed " << a << unit << " " << "which equals to " << a * inToMeters << " meters." << std::endl;
+		} else {
+			std::cout << "Illegal" << std::endl;
+		} 
 
 		if (firstInput) {
 			smallest = a;
