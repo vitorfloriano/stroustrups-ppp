@@ -17,6 +17,7 @@ double findMedian(std::vector<double> vec) {
 	} else {
 		median = vec[vec.size()/2];			
 	}
+
 	return median;
 }
 
@@ -40,4 +41,6 @@ int main()
 	
 	std::sort(temps.begin(),temps.end());
 	std::cout << "Median temperature: " << findMedian(temps) << std::endl;
+
+	return 0;
 }
