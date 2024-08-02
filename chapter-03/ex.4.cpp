@@ -29,30 +29,25 @@ double findSmallDist(std::vector<double> ds) {
 	return smalldist;
 }
 
-std::string printDists(std::vector<double> d) {
-	for (int i = 0; i < d.size(); i++) {
-		 bool firstindex = true;
-		 if (firstindex == true) {
-			 firstindex = false;
-			 std::cout << d[i];
-		 } else if (i == (d.size() - 1)) {
-			std::cout << d[i] << "." << std::endl;
-		 } else {
-			std::cout << ", " << d[i];
-		 }
-	}		
-	return 0;
-}
-
-
-int main() {
-
+int main() 
+{
 	while (std::cin >> dist) {
 		dists.push_back(dist);
 	}
 	
-	std::cout << "The numbers you typed were: " << printDists(dists) << std::endl
-		  << "The sum of all the distances is " << totalDistance(dists) << "." << std::endl
+	std::cout << "The numbers you typed were ";
+
+	for (int i = 0; i < dists.size(); i++) {
+		 if (i == 0) {
+			std::cout << dists[i];
+		 } else if (i == (dists.size() - 1)) {
+			std::cout << " and " << dists[i] << "." << std::endl;
+		 } else {
+			std::cout << ", " << dists[i];
+		 }
+	}
+
+	std::cout << "The sum of all the distances is " << totalDistance(dists) << "." << std::endl
 		  << "The smallest of all the distances is " << findSmallDist(dists) << "." << std::endl;
 	
 	return 0;
