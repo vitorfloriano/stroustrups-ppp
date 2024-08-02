@@ -29,6 +29,31 @@ double findSmallDist(std::vector<double> ds) {
 	return smalldist;
 }
 
+double findGreatDist(std::vector<double> ds) {
+	double greatdist;
+	bool firstdist = true;
+	for (double i : ds) {
+		if (firstdist) {
+			firstdist = false;
+			greatdist = i;
+		} else if (i > greatdist) {
+			greatdist = i;
+		}
+	}
+
+	return greatdist;
+}
+
+double findMean(std::vector<double> ds) {
+	double accum;
+	double mean;
+	for (double i : ds) {
+		accum += i;
+		mean = accum / ds.size();	
+	}	
+	return mean;
+}
+
 int main() 
 {
 	while (std::cin >> dist) {
@@ -48,7 +73,9 @@ int main()
 	}
 
 	std::cout << "The sum of all the distances is " << totalDistance(dists) << "." << std::endl
-		  << "The smallest of all the distances is " << findSmallDist(dists) << "." << std::endl;
+		  << "The smallest of all the distances is " << findSmallDist(dists) << "." << std::endl
+		  << "The greatest of all the distances is " << findGreatDist(dists) << "." << std::endl
+		  << "The mean of all the distances is " << findMean(dists) << "." << std::endl;
 	
 	return 0;
 }
