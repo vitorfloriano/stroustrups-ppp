@@ -1,6 +1,6 @@
 #include <iostream>
 
-double calc() {
+void calc() {
 	double arg1, arg2, result;
 	char operation;
 
@@ -10,24 +10,22 @@ double calc() {
 		switch (operation) {
 		case '+':
 			result = arg1 + arg2;
-			std::cout << result << std::endl;
+			std::cout << "The sum of " << arg1 << " and " << arg2 << " is " << result << "." << std::endl;
 			break;
 		case '-':
 			result = arg1 - arg2;
-			std::cout << result << std::endl;
+			std::cout << "The subtraction of " << arg2 << " from " << arg1 << " is " << result << "." << std::endl;
 			break;
 		case '/':
 			result = arg1 / arg2;
-			std::cout << result << std::endl;
+			std::cout << "The division of " << arg1 << " by " << arg2 << " is " << result << "." << std::endl;
 			break;
 		case '*':
 			result = arg1 * arg2;
-			std::cout << result << std::endl;
+			std::cout << "The multiplication of " << arg1 << " by " << arg2 << " is " << result << "." << std::endl;
 			break;
 		}
 	}
-
-	return result;
 }
 
 int main() {
