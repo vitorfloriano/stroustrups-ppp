@@ -1,32 +1,40 @@
-#include<iostream>
+#include <iostream>
 
-int unumber, guess,fguess, nguess, pguess;
 constexpr int limit = 100;
 
-void askForNumber() {
+void guessNumber() {
+	int low = 1;
+	int high = limit;
+	int mid;
+	char response;
 
-	std::cout << "Type a number from 1 to 100:" << std::endl;
-	std::cin >> unumber;
+	std::cout << "Think of a number between 1 and 100.\n";
+	std::cout << "I will try to guess it by asking no more than 7 questions.\n";
 
+	for (int i = 0; i < 7; ++i) {
+		mid = (low + high) / 2;
+		std::cout << "Is the number you are thinking of greater than " << mid << "? (y/n): ";
+		std::cin >> response;
+
+		if (response == 'y' || response == 'Y') {
+			low = mid + 1;
+		} else {
+			high = mid;
+		}
+
+		// If the range has narrowed to a single number, we can stop early
+
+		if (low == high) {
+			break;
+		}
+	}
+
+	// After the loop, low and high should be the same
+
+	std::cout << "The number you are thinking of is " << low << "!\n";
 }
 
-char askAboutNumber() {
-
-	guess = fguess;	
-	std::cout << "Is the number you thought about bigger than " << guess << "?" << std::endl;
-	char a;
-	std::cin >> a;
-	if (a == 'y') {
-		
-	}		
-
-	return a;
-}
-
-int main()
-{
-	askForNumber();
-	askAboutNumber();
-
+int main() {
+	guessNumber();
 	return 0;
-}	
+}
